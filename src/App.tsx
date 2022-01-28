@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { CommentsList } from "sddd"
+import { CommentsList } from 'components';
 
 function App() {
   return (

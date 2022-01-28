@@ -11,17 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35cde3a0-0acb-44ea-9dd6-9f4d1d1871e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CommentItem/CommentItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CommentItem/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CommentsList/CommentsList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CommentsList/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +69,8 @@
       <option name="presentableId" value="Default" />
       <updated>1643366647128</updated>
       <workItem from="1643366650033" duration="5358000" />
+      <workItem from="1643377464258" duration="27000" />
+      <workItem from="1643377940456" duration="4000" />
     </task>
     <servers />
   </component>
@@ -92,6 +87,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="753" y="428" key="#ESLint" timestamp="1643374791231">
