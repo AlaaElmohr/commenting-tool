@@ -6,7 +6,7 @@ import { CommentInputProps } from './types';
 
 const CommentInput = ({ onSubmitReply }: CommentInputProps) => {
   return (
-    <form className="flex" onSubmit={onSubmitReply}>
+    <form className="flex" onSubmit={() => onSubmitReply('', '', '')}>
       <input
         type="text"
         placeholder="write a comment..."

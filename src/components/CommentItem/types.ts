@@ -1,8 +1,9 @@
-import { Comment } from 'types';
+import { Comment, Input, OnReplyParams, SubmitReplyParams } from 'types';
 
 export type CommentProps = {
   data: Comment;
-  onReply: () => void;
-  onSubmitReply: () => void;
-  isInputVisible: boolean;
+  onReply: OnReplyParams;
+  onSubmitReply: SubmitReplyParams;
+  visibleInputs: Input;
+  level: number;
 };

@@ -1,5 +1,5 @@
-import { Comment } from 'types';
+import { Comment, SubmitReplyParams } from 'types';
 
 export type CommentInputProps = {
-  onSubmitReply: () => void;
+  onSubmitReply: SubmitReplyParams;
 };
