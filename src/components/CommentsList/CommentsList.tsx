@@ -15,9 +15,8 @@ const renderComments: CommentsListParams = (
   return (
     <>
       {data.map((comment, index) => (
-        <>
+        <div key={comment._id}>
           <CommentItem
-            key={comment._id}
             data={comment}
             onReply={onReply}
             onSubmitReply={onSubmitReply}
@@ -32,7 +31,7 @@ const renderComments: CommentsListParams = (
               visibleInputs,
               level + 1,
             )}
-        </>
+        </div>
       ))}
     </>
   );

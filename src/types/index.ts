@@ -14,13 +14,13 @@ export interface Threads extends Array<Comment> {}
 export interface Comments extends Array<Comment> {}
 
 export type SubmitReplyParams = {
-  (id: string, parentId: string, comment: string): void;
+  (id: string | null, parentId: string | null, comment: string): void;
 };
 
 export type OnReplyParams = {
-  (id: string): void;
+  (id: string | null): void;
 };
 
 export type Input = {
   [key: string]: string;
-}
+};

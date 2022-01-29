@@ -1,7 +1,7 @@
 import { Comments } from 'types';
 
 export interface CommentParams {
-  (id: string, parentId: string, comment: string): void;
+  (id: string | null, parentId: string | null, comment: string): void;
 }
 
 export interface CommentsState {

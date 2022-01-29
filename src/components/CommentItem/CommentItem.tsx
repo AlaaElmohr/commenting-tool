@@ -33,7 +33,11 @@ const CommentItem = ({
           </button>
           {visibleInputs.hasOwnProperty(data._id) &&
             visibleInputs[data._id] && (
-              <CommentInput onSubmitReply={onSubmitReply} />
+              <CommentInput
+                onSubmitReply={comment =>
+                  onSubmitReply(data._id, data.parent_id, comment)
+                }
+              />
             )}
         </div>
       </div>

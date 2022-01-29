@@ -24,7 +24,7 @@
             "user_id": "f83ab33c-805a-11ec-a8a3-0242ac120002",
             "comment": "This explains why the CLI application I build with Zig was closing the moment I run it, there is nothing to do at runtime! Thanks for enlightening me.",
             "date": 1642767556000,
-            "parent_id": "f83aadec-805a-11ec-a8a3-0242ac120002",
+            "parent_id": "f83aa8ce-805a-11ec-a8a3-0242ac120002",
             "threads": [
               {
                 "_id": "f83aadddc-805a-11ec-a8a3-0242ac120002",
@@ -33,7 +33,7 @@
                 "user_id": "f83ab436-805a-11ec-a8a3-0242ac120002",
                 "comment": "Zig has comptime, which allows all computations to have zero runtime cost.",
                 "date": 1642774756000,
-                "parent_id": "f83aadec-805a-11ec-a8a3-0242ac120002"
+                "parent_id": "f83aa8ce-805a-11ec-a8a3-0242ac120002"
               }
             ]
           }

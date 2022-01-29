@@ -50,7 +50,7 @@ const useComment = () => {
       _id: nanoid(),
     };
 
-    if (id === null) {
+    if (parentId === null || id === null) {
       //if there is no id this mean that this a comment not a thread, then push it at the beginning of the comments list.
       commentsList.unshift(newComment);
     } else {

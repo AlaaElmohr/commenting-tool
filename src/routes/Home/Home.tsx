@@ -11,9 +11,11 @@ const Home = () => {
   const { data, addComment } = useComment();
 
   const onReply: OnReplyParams = id => {
-    const isInputExist = visibleInputs.hasOwnProperty(id);
+    if (id !== null) {
+      const isInputExist = visibleInputs.hasOwnProperty(id);
 
-    setVisibleInputs(prevState => ({ ...prevState, [id]: !isInputExist }));
+      setVisibleInputs(prevState => ({ ...prevState, [id]: !isInputExist }));
+    }
   };
 
   const onSubmitReply: SubmitReplyParams = (id, parentId, comment) => {
@@ -23,7 +25,9 @@ const Home = () => {
 
   return (
     <div className="w-1/3">
-      <CommentInput onSubmitReply={onSubmitReply} />
+      <CommentInput
+        onSubmitReply={comment => onSubmitReply(null, null, comment)}
+      />
       <CommentsList
         data={data}
         onReply={onReply}
