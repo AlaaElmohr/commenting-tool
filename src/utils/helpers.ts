@@ -1,3 +1,7 @@
+import moment from 'moment';
+/*
+local files
+*/
 import { Helpers } from './types';
 
 const helpers: Helpers = {
@@ -22,6 +26,11 @@ const helpers: Helpers = {
         parentComment?.threads?.unshift(newComment);
       }
     }
+  },
+  getTime: time => {
+    const sinceNow = moment(time).fromNow();
+
+    return sinceNow;
   },
 };
 

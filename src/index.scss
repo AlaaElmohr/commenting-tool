@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins'), url(./assets/fonts/Poppins-Medium.ttf) format('ttf');
+}
+@tailwind utilities;
+
+body {
+  font-size: 14px;
+}
+
+#root {
+  @apply flex justify-center;
+}
+
+img {
+  max-width: unset;
+}

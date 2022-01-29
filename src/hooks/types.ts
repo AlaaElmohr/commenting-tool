@@ -1,11 +1,11 @@
-import {Comments} from 'types';
+import { Comments } from 'types';
 
 export interface CommentParams {
   (id: string, parentId: string, comment: string): void;
 }
 
 export interface CommentsState {
-  data: Comments
+  data: Comments;
 }
 
 export enum CommentsActionsTypes {
