@@ -1,9 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/*
+local files
+*/
 import { CommentsList } from 'components';
+import { useComment } from 'hooks';
 
 function App() {
+  const { data, addComment } = useComment();
+
   return (
     <>
       <CommentsList />

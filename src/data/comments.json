@@ -1,0 +1,54 @@
+[
+  {
+    "_id": "f83aa8ce-805a-11ec-a8a3-0242ac120002",
+    "user_name": "oilaba",
+    "user_image": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_0.png",
+    "user_id": "f83ab33c-805a-11ec-a8a3-0242ac120002",
+    "comment": "There's no way Rust is zero cost, even the simple act of adding two numbers have a runtime cost. After years of academic research on the topic of computer science and zero cost abstractions, we still waste CPU cycles on adding numbers together.",
+    "date": 1642688356000,
+    "parent_id": null,
+    "threads": [
+      {
+        "_id": "f83aadec-805a-11ec-a8a3-0242ac120002",
+        "user_name": "chayleaf",
+        "user_image": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_6.png",
+        "user_id": "f83ab436-805a-11ec-a8a3-0242ac120002",
+        "comment": "Zig has comptime, which allows all computations to have zero runtime cost.",
+        "date": 1642774756000,
+        "parent_id": "f83aa8ce-805a-11ec-a8a3-0242ac120002",
+        "threads": [
+          {
+            "_id": "f83ac476-805a-11ec-a8a3-0242ac120002",
+            "user_name": "oilaba",
+            "user_image": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_0.png",
+            "user_id": "f83ab33c-805a-11ec-a8a3-0242ac120002",
+            "comment": "This explains why the CLI application I build with Zig was closing the moment I run it, there is nothing to do at runtime! Thanks for enlightening me.",
+            "date": 1642767556000,
+            "parent_id": "f83aadec-805a-11ec-a8a3-0242ac120002",
+            "threads": []
+          }
+        ]
+      },
+      {
+        "_id": "f83aaf0e-805a-11ec-a8a3-0242ac120002",
+        "user_name": "chayleaf",
+        "user_image": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_3.png",
+        "user_id": "f83ab22e-805a-11ec-a8a3-0242ac120002",
+        "comment": "mov eax, <result> has a runtime cost too, which means running compiled programs is a no-go too. In conclusion, all hail JS!",
+        "date": 1642767556000,
+        "parent_id": "f83aa8ce-805a-11ec-a8a3-0242ac120002",
+        "threads": []
+      }
+    ]
+  },
+  {
+    "_id": "f83ab030-805a-11ec-a8a3-0242ac120002",
+    "user_name": "PL_Design",
+    "user_image": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_2.png",
+    "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
+    "comment": "if you were moral and had to use an immoral language, then you would write the bounds checking by hand every time. only immoral people fail to see how rust is not Starsoup approved zero cost",
+    "date": 1642853956000,
+    "parent_id": null,
+    "threads": []
+  }
+]

@@ -11,10 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35cde3a0-0acb-44ea-9dd6-9f4d1d1871e1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +73,9 @@
       <updated>1643366647128</updated>
       <workItem from="1643366650033" duration="5358000" />
       <workItem from="1643377464258" duration="27000" />
-      <workItem from="1643377940456" duration="4000" />
+      <workItem from="1643377940456" duration="603000" />
+      <workItem from="1643398013969" duration="97000" />
+      <workItem from="1643398265593" duration="11028000" />
     </task>
     <servers />
   </component>
@@ -102,5 +107,9 @@
       <screen x="0" y="25" width="1792" height="1031" />
     </state>
     <state x="405" y="176" key="SettingsEditor/0.25.1792.1031@0.25.1792.1031" timestamp="1643374827297" />
+    <state x="561" y="253" width="670" height="676" key="search.everywhere.popup" timestamp="1643398546145">
+      <screen x="0" y="25" width="1792" height="1031" />
+    </state>
+    <state x="561" y="253" width="670" height="676" key="search.everywhere.popup/0.25.1792.1031@0.25.1792.1031" timestamp="1643398546145" />
   </component>
 </project>
