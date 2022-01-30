@@ -37,21 +37,21 @@ const Home = () => {
   };
 
   return (
-    <div className="grid grid-cols-3 gap-4 p-4">
-      <div>
+    <section className="bg-primaryBg grid xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4 p-4">
+      <main>
         <CommentInput
           forReply={false}
           onSubmitReply={comment => onSubmitReply(null, null, comment)}
         />
         {renderCommentsList(false)}
-      </div>
+      </main>
       {thread.length > 0 && (
         <div>
           <h1 className="font-bold mt-4 underline">Threads</h1>
           {renderCommentsList(true)}
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

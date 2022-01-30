@@ -4,6 +4,8 @@ module.exports = {
   ],
   theme: {
     colors: {
+      primaryBg: 'rgba(211, 226, 242, 0.4)',
+      navyBlueColor: '#eff2f5',
       lightGrey: '#F7F7F7',
       grey: '#F6F7F8',
       grey300: '#8C8C8C',

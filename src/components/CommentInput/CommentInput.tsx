@@ -26,6 +26,7 @@ const CommentInput = ({
       .join('\n');
 
     onSubmitReply(comment);
+    setEditorState(EditorState.createEmpty());
   };
 
   return (
@@ -37,9 +38,9 @@ const CommentInput = ({
         },
       }}
       editorState={editorState}
-      toolbarClassName="mb-0 bg-grey"
-      wrapperClassName="flex flex-col-reverse relative mt-3 w-full"
-      editorClassName="p-2 border-2 border-b-0  border-lightGrey text-black text-sm w-full"
+      toolbarClassName="mb-0 bg-grey rounded-bl-lg rounded-br-lg"
+      wrapperClassName="flex shadow-sm flex-col-reverse relative mt-3 w-full"
+      editorClassName="p-2 border-2 rounded-tl-lg rounded-tr-lg border-b-0  bg-white border-lightGrey text-black text-sm w-full"
       onEditorStateChange={onEditorStateChange}
       toolbarCustomButtons={
         !forReply

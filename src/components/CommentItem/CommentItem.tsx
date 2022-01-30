@@ -1,7 +1,4 @@
 import React from 'react';
-import { Editor } from 'react-draft-wysiwyg';
-import { EditorState, convertFromRaw, RawDraftContentState } from 'draft-js';
-
 /*
  local files
  */
@@ -19,9 +16,12 @@ const CommentItem: React.FC<CommentProps> = ({
 }) => {
   return (
     <>
-      <article className={`flex mt-5`} style={{ marginLeft: level * 20 }}>
+      <article
+        className={`flex mt-5 bg-white shadow-sm rounded-lg p-3`}
+        style={{ marginLeft: level * 20 }}
+      >
         <Avatar url={data.user_image} alt={`${data.user_name}_image`} />
-        <div className="ml-2">
+        <div className="ml-2 w-full">
           <div className="flex items-center mt-1">
             <h3 className="text-md font-bold text-black">{data.user_name}</h3>
             <h6 className="text-xs text-grey100 ml-1">

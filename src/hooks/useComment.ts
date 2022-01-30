@@ -25,7 +25,7 @@ const initialState = {
 const useComment = () => {
   const [state, dispatch] = useReducer(
     (state: CommentsState, { payload, type }: CommentsAction) => {
-      const { limit, page, allData, data } = state;
+      const { limit, page, allData, data} = state;
 
       switch (type) {
         case CommentsActionsTypes.SET:
@@ -40,7 +40,7 @@ const useComment = () => {
           return {
             ...state,
             allData: payload,
-            data: payload,
+            data: payload.slice(0, data.length),
             total: payload.length,
           };
         case CommentsActionsTypes.UPDATE:
@@ -70,13 +70,15 @@ const useComment = () => {
   }, []);
 
   const addComment: CommentParams = (id, parentId, comment) => {
-    let commentsList = [...state.data];
+    let commentsList = [...state.allData];
+
     const newComment: Comment = {
       ...userData,
       comment,
       date: new Date().getTime(),
-      parent_id: id,
+      parent_id: parentId,
       _id: nanoid(),
+      threads: [],
     };
 
     if (parentId === null && id === null) {
@@ -115,7 +117,6 @@ const useComment = () => {
   const getThread = (id: string, parentId: string | null) => {
     let data = [...state.allData];
     let parentComment = [];
-    console.log('id', id, parentId);
 
     if (parentId === null) {
       parentComment = data.filter(comment => comment._id === id);
@@ -123,20 +124,24 @@ const useComment = () => {
       parentComment = data.filter(comment => comment._id === parentId);
     }
 
-    console.log('parentComment', parentComment);
     if (parentComment.length > 0) {
       const targetedThread = helpers.findComment(parentComment[0], id);
-      console.log('targetedThread', targetedThread);
+
       if (targetedThread !== null) {
         targetedThread.parent_id = null;
         const mainThread = helpers.setMainThread(targetedThread, id);
-        console.log('mainthread', mainThread);
+
         dispatch({
           type: CommentsActionsTypes.SETTHREAD,
           payload: [mainThread],
         });
       }
     }
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   };
 
   return {
