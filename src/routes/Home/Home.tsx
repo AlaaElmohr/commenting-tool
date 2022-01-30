@@ -4,15 +4,19 @@ local files
 */
 import { CommentInput, CommentsList } from 'components';
 import { useComment, useScroll } from 'hooks';
-import { OnReplyParams, SubmitReplyParams, Comments } from 'types';
+import { OnReplyParams, SubmitReplyParams } from 'types';
 
 const Home = () => {
   const [visibleInputs, setVisibleInputs] = useState({});
-  const { data, thread, addComment, onLoadMore, getThread } = useComment();
+  const { data, thread, removeThread, addComment, onLoadMore, getThread } =
+    useComment();
+  //listen to scroll event
   useScroll(onLoadMore);
 
   const onReply: OnReplyParams = id => {
     if (id !== null) {
+      //when user apt to reply to comment, push the commentId into visibleInputs with true as value to indicate that this input is visible
+      //after cancel comment or submitting, change the value to false to hide this input
       const isInputExist = visibleInputs.hasOwnProperty(id);
 
       setVisibleInputs(prevState => ({ ...prevState, [id]: !isInputExist }));
@@ -47,7 +51,10 @@ const Home = () => {
       </main>
       {thread.length > 0 && (
         <div>
-          <h1 className="font-bold mt-4 underline">Threads</h1>
+          <div className="flex justify-between">
+            <h1 className="font-bold mt-4 underline">Threads</h1>
+            <button onClick={removeThread}>X</button>
+          </div>
           {renderCommentsList(true)}
         </div>
       )}

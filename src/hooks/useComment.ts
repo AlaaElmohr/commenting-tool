@@ -25,10 +25,11 @@ const initialState = {
 const useComment = () => {
   const [state, dispatch] = useReducer(
     (state: CommentsState, { payload, type }: CommentsAction) => {
-      const { limit, page, allData, data} = state;
+      const { limit, page, allData, data } = state;
 
       switch (type) {
         case CommentsActionsTypes.SET:
+          //get the initial 5 items
           return {
             ...state,
             allData: payload,
@@ -37,6 +38,7 @@ const useComment = () => {
             page: 1,
           };
         case CommentsActionsTypes.ADD:
+          //handle adding new comments by updating original data with new one
           return {
             ...state,
             allData: payload,
@@ -44,6 +46,7 @@ const useComment = () => {
             total: payload.length,
           };
         case CommentsActionsTypes.UPDATE:
+          //handle loading more by adding more 5 items from the original data.
           return {
             ...state,
             data: [...data, ...allData.slice(page * limit, limit * (page + 1))],
@@ -72,6 +75,7 @@ const useComment = () => {
   const addComment: CommentParams = (id, parentId, comment) => {
     let commentsList = [...state.allData];
 
+    //new comment
     const newComment: Comment = {
       ...userData,
       comment,
@@ -82,9 +86,10 @@ const useComment = () => {
     };
 
     if (parentId === null && id === null) {
-      //if there is no id this mean that this a comment not a thread, then push it at the beginning of the comments list.
+      //if there is no id or parent id this mean that this a comment not a thread, then push it at the beginning of the comments list.
       commentsList.unshift(newComment);
     } else if (parentId === null && id) {
+      //this means that user try to comment on the main comments not on nested threads.
       const targetedComment = commentsList.filter(
         comment => comment._id === id,
       );
@@ -118,6 +123,7 @@ const useComment = () => {
     let data = [...state.allData];
     let parentComment = [];
 
+    //get the top level comment for the thread
     if (parentId === null) {
       parentComment = data.filter(comment => comment._id === id);
     } else {
@@ -125,9 +131,11 @@ const useComment = () => {
     }
 
     if (parentComment.length > 0) {
+      //get the target thread
       const targetedThread = helpers.findComment(parentComment[0], id);
 
       if (targetedThread !== null) {
+        //make this target thread as a top level comment by changing its thread children parentId's to its commentId.
         targetedThread.parent_id = null;
         const mainThread = helpers.setMainThread(targetedThread, id);
 
@@ -138,9 +146,17 @@ const useComment = () => {
       }
     }
 
+    // scroll to the top of window smoothly
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
+    });
+  };
+
+  const removeThread = () => {
+    dispatch({
+      type: CommentsActionsTypes.SETTHREAD,
+      payload: [],
     });
   };
 
@@ -149,6 +165,7 @@ const useComment = () => {
     addComment,
     onLoadMore,
     getThread,
+    removeThread,
   };
 };
 

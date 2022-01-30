@@ -1,46 +1,51 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+## Development
 
 In the project directory, you can run:
-
+### `yarn install` <br />
+then
 ### `yarn start`
 
-Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Libraries
 
-### `yarn test`
+* [react-draft-wysiwyg](https://www.npmjs.com/package/react-draft-wysiwyg) - editor input for adding comment input
+* [tailwind](https://tailwindcss.com) - for styling
+* [nanoid](https://www.npmjs.com/package/nanoid) - to generate unique id
+* [moment](https://www.npmjs.com/package/moment) 
+* [Eslint](https://eslint.org/) 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## My Approach
+- create json file with what the comments data look like and I insert some dummy data on it, data will have its id, user name, id, image,
+comment date, comment text and the parent id which is the id of the main comment and array of threads that this comment has.
+- created custom hook called `useComment` to seperate the logic from the UI and to get the comments data from json file first,
+adding new comment or adding replying on nested threads, handle pagination, handling setting a thread as a main comment when this thread has 
+a lot of nested comments. 
+- created another custom hook called `useScroll` to listen to user scrolling behaviour and to detect if user scrolled to the bottom of the screen
+to get more comments.
+- created Components such as:
+`Avatar` to display user's image. <br>
+`CommentInput` which contain of the editor input<br>
+`CommentItem` to display the Comment <br>
+`CommentsList` to handle displaying all comments with its threads recursivly.
+- used tailwind utilies and color themes for styling.  
 
-### `yarn build`
+## My Approach for improving the UX
+- added infinite scrolling so user can paginate smoothly. <br>
+- showing new thread section when user has many threads.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##Idea to improve UX
+1- add funcionality to the editor input so user can style the comment. <br> 
+2- add collapse for comments so user can have the control of hidding and showing nested comments. <br>
+3- add more actions such as like, upvote to make user engage more with the comments.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ScreenShots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Desktop
+![A screenshot of Laptop Screen](screenshots/Desktop-1.png) 
+Desktop With Thread
+![A screenshot of Tablet Screen](screenshots/Desktop-2.png) 
+Tablet     
+![A screenshot of Laptop Screen](screenshots/Tablet.png) 
+Mobile       
+![A screenshot of Laptop Screen](screenshots/Mobile.png) 

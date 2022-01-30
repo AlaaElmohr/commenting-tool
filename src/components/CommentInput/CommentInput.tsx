@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Editor } from 'react-draft-wysiwyg';
 import { EditorState, convertToRaw } from 'draft-js';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
@@ -24,8 +24,9 @@ const CommentInput = ({
     const comment = blocks
       .map(block => (!block.text.trim() && '\n') || block.text)
       .join('\n');
-
+    //get text of comment
     onSubmitReply(comment);
+    //reset the input after submitting.
     setEditorState(EditorState.createEmpty());
   };
 

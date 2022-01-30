@@ -26,6 +26,7 @@ const renderComments: CommentsListParams = (
           >
             <>
               {comment.threads ? (
+                //if the thread is 6 in depth and has more comments then show Continue this thread to start new thread.
                 comment.threads.length >= 1 && level >= 6 ? (
                   <button
                     className="mt-3 font-bold text-black underline"
