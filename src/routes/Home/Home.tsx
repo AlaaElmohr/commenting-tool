@@ -3,12 +3,13 @@ import React, { useState } from 'react';
 local files
 */
 import { CommentInput, CommentsList } from 'components';
-import { useComment } from 'hooks';
+import { useComment, useScroll } from 'hooks';
 import { OnReplyParams, SubmitReplyParams } from 'types';
 
 const Home = () => {
   const [visibleInputs, setVisibleInputs] = useState({});
-  const { data, addComment } = useComment();
+  const { data, addComment, onLoadMore } = useComment();
+  useScroll(onLoadMore);
 
   const onReply: OnReplyParams = id => {
     if (id !== null) {

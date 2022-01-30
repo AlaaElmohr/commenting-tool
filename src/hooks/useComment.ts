@@ -14,17 +14,32 @@ import {
 import { Comment } from 'types';
 
 const initialState = {
+  allData: [],
   data: [],
+  page: 1,
+  total: 0,
+  limit: 5,
 };
 
 const useComment = () => {
   const [state, dispatch] = useReducer(
     (state: CommentsState, { payload, type }: CommentsAction) => {
+      const { limit, page, allData, data } = state;
+
       switch (type) {
+        case CommentsActionsTypes.ADD:
+          return {
+            ...state,
+            allData: payload,
+            data: payload.slice(0, limit),
+            total: payload.length,
+            page: 1,
+          };
         case CommentsActionsTypes.UPDATE:
           return {
             ...state,
-            data: payload,
+            data: [...data, ...allData.slice(page * limit, limit * (page + 1))],
+            page: page + 1,
           };
         default:
           return state;
@@ -35,7 +50,7 @@ const useComment = () => {
 
   useEffect(() => {
     dispatch({
-      type: CommentsActionsTypes.UPDATE,
+      type: CommentsActionsTypes.ADD,
       payload: CommentsData,
     });
   }, []);
@@ -68,9 +83,21 @@ const useComment = () => {
     });
   };
 
+  const onLoadMore = () => {
+    console.log('totalm,', state.total, state.data.length);
+    if (state.total >= state.data.length) {
+      console.log('Hello');
+      dispatch({
+        type: CommentsActionsTypes.UPDATE,
+        payload: '',
+      });
+    }
+  };
+
   return {
     ...state,
     addComment,
+    onLoadMore,
   };
 };
 

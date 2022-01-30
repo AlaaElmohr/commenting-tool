@@ -5,11 +5,16 @@ export interface CommentParams {
 }
 
 export interface CommentsState {
+  allData: Comments;
   data: Comments;
+  page: number;
+  total: number;
+  limit: number;
 }
 
 export enum CommentsActionsTypes {
   UPDATE = 'update',
+  ADD = 'add',
 }
 
 export interface CommentsAction {
