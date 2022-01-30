@@ -7,7 +7,11 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
  */
 import { CommentInputProps } from './types';
 
-const CommentInput = ({ onSubmitReply }: CommentInputProps) => {
+const CommentInput = ({
+  onSubmitReply,
+  forReply,
+  onCancel,
+}: CommentInputProps) => {
   const [editorState, setEditorState] = React.useState(() =>
     EditorState.createEmpty(),
   );
@@ -22,7 +26,6 @@ const CommentInput = ({ onSubmitReply }: CommentInputProps) => {
       .join('\n');
 
     onSubmitReply(comment);
-    //setComment('');
   };
 
   return (
@@ -38,15 +41,31 @@ const CommentInput = ({ onSubmitReply }: CommentInputProps) => {
       wrapperClassName="flex flex-col-reverse relative mt-3 w-full"
       editorClassName="p-2 border-2 border-b-0  border-lightGrey text-black text-sm w-full"
       onEditorStateChange={onEditorStateChange}
-      toolbarCustomButtons={[
-        <button className="absolute right-2 mb-1 py-1 px-3">Cancel</button>,
-        <button
-          onClick={handleSubmit}
-          className="absolute right-20 mb-1 mr-3 bg-grey300 rounded-full text-white py-1 px-3"
-        >
-          Reply
-        </button>,
-      ]}
+      toolbarCustomButtons={
+        !forReply
+          ? [
+              <button
+                onClick={handleSubmit}
+                className="absolute right-2 mb-1 py-1 px-3 bg-grey300 rounded-full text-white"
+              >
+                Comment
+              </button>,
+            ]
+          : [
+              <button
+                onClick={onCancel}
+                className="absolute right-20 mb-1 mr-3  py-1 px-3"
+              >
+                Cancel
+              </button>,
+              <button
+                onClick={handleSubmit}
+                className="absolute right-2 mb-1 py-1 px-3 bg-grey300 rounded-full text-white"
+              >
+                Reply
+              </button>,
+            ]
+      }
       placeholder={'Write your thoughts...'}
     />
   );

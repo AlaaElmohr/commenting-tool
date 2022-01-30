@@ -40,6 +40,7 @@ const Home = () => {
     <div className="grid grid-cols-3 gap-4 p-4">
       <div>
         <CommentInput
+          forReply={false}
           onSubmitReply={comment => onSubmitReply(null, null, comment)}
         />
         {renderCommentsList(false)}

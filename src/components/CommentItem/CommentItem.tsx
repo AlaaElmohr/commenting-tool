@@ -39,6 +39,8 @@ const CommentItem: React.FC<CommentProps> = ({
             {visibleInputs.hasOwnProperty(data._id) &&
               visibleInputs[data._id] && (
                 <CommentInput
+                  onCancel={() => onReply(data._id)}
+                  forReply
                   onSubmitReply={comment =>
                     onSubmitReply(data._id, data.parent_id, comment)
                   }
