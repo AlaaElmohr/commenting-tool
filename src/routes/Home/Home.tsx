@@ -4,11 +4,11 @@ local files
 */
 import { CommentInput, CommentsList } from 'components';
 import { useComment, useScroll } from 'hooks';
-import { OnReplyParams, SubmitReplyParams } from 'types';
+import { OnReplyParams, SubmitReplyParams, Comments } from 'types';
 
 const Home = () => {
   const [visibleInputs, setVisibleInputs] = useState({});
-  const { data, addComment, onLoadMore } = useComment();
+  const { data, thread, addComment, onLoadMore, getThread } = useComment();
   useScroll(onLoadMore);
 
   const onReply: OnReplyParams = id => {
@@ -24,17 +24,33 @@ const Home = () => {
     addComment(id, parentId, comment);
   };
 
-  return (
-    <div className="w-1/3">
-      <CommentInput
-        onSubmitReply={comment => onSubmitReply(null, null, comment)}
-      />
+  const renderCommentsList = (isThread = false) => {
+    return (
       <CommentsList
-        data={data}
+        data={isThread ? thread : data}
         onReply={onReply}
         onSubmitReply={onSubmitReply}
         visibleInputs={visibleInputs}
+        getThread={getThread}
       />
+    );
+  };
+  console.log('thread', thread);
+
+  return (
+    <div className="grid grid-cols-3 gap-4 p-4">
+      <div>
+        <CommentInput
+          onSubmitReply={comment => onSubmitReply(null, null, comment)}
+        />
+        {renderCommentsList(false)}
+      </div>
+      {thread.length > 0 && (
+        <div>
+          <h1 className="font-bold mt-4 underline">Threads</h1>
+          {renderCommentsList(true)}
+        </div>
+      )}
     </div>
   );
 };

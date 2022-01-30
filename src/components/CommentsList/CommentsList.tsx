@@ -11,6 +11,7 @@ const renderComments: CommentsListParams = (
   onSubmitReply,
   visibleInputs,
   level,
+  getThread,
 ) => {
   return (
     <>
@@ -23,14 +24,26 @@ const renderComments: CommentsListParams = (
             visibleInputs={visibleInputs}
             level={level}
           />
-          {comment.threads &&
-            renderComments(
-              comment.threads,
-              onReply,
-              onSubmitReply,
-              visibleInputs,
-              level + 1,
-            )}
+          {comment.threads ? (
+            comment.threads.length >= 1 && level >= 6 ? (
+              <button
+                className="mt-3 font-bold text-black underline"
+                style={{ marginLeft: level * 20 + 30 }}
+                onClick={() => getThread(comment._id, comment.parent_id)}
+              >
+                Continue this thread
+              </button>
+            ) : (
+              renderComments(
+                comment.threads,
+                onReply,
+                onSubmitReply,
+                visibleInputs,
+                level + 1,
+                getThread,
+              )
+            )
+          ) : null}
         </div>
       ))}
     </>
@@ -42,8 +55,20 @@ const CommentsList = ({
   onReply,
   onSubmitReply,
   visibleInputs,
+  getThread,
 }: CommentsListProps) => {
-  return <>{renderComments(data, onReply, onSubmitReply, visibleInputs, 0)}</>;
+  return (
+    <>
+      {renderComments(
+        data,
+        onReply,
+        onSubmitReply,
+        visibleInputs,
+        0,
+        getThread,
+      )}
+    </>
+  );
 };
 
 export default CommentsList;

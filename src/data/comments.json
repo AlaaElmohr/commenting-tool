@@ -18,7 +18,7 @@
         "parent_id": "f83aa8ce-805a-11ec-a8a3-0242ac120002",
         "threads": [
           {
-            "_id": "f83ac476-805a-11ec-a8a3-0242ac120002",
+            "_id": "f83ac476-805a-11ec-a8a3-0242ac12000267",
             "user_name": "oilaba",
             "user_image": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_0.png",
             "user_id": "f83ab33c-805a-11ec-a8a3-0242ac120002",
@@ -45,7 +45,7 @@
                     "parent_id": "f83aa8ce-805a-11ec-a8a3-0242ac120002",
                     "threads": [
                       {
-                        "_id": "f83aadec-805a-11ec-a8a3-0242ac120002",
+                        "_id": "f83aadec-805a-11ec-a8a3-0242ac1200024444",
                         "user_name": "chayleaf",
                         "user_image": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_6.png",
                         "user_id": "f83ab436-805a-11ec-a8a3-0242ac120002",
@@ -54,14 +54,105 @@
                         "parent_id": "f83aa8ce-805a-11ec-a8a3-0242ac120002",
                         "threads": [
                           {
-                            "_id": "f83aadec-805a-11ec-a8a3-0242ac120002",
+                            "_id": "f83aadec-805a-11ec-a8a3-0242ac1200021111",
                             "user_name": "PL_Design",
                             "user_image": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_2.png",
                             "user_id": "f83ab436-805a-11ec-a8a3-0242ac120002",
                             "comment": "if you were moral and had to use an immoral language, then you would write the bounds checking by hand every time. only immoral people fail to see how rust is not Starsoup approved zero cost",
                             "date": 1642853956000,
                             "parent_id": "f83aa8ce-805a-11ec-a8a3-0242ac120002",
-                            "threads": []
+                            "threads": [
+                              {
+                                "_id": "f83aa8ce-805a-11ec-a8a3-0242ac1200011",
+                                "user_name": "PL_Design",
+                                "user_image": "https://styles.redditmedia.com/t5_25dzpt/styles/profileIcon_snoo07ffed13-24dc-41b5-8f23-49c8f7e3817f-headshot.png?width=256&height=256&crop=256:256,smart&s=ce0595e7e3fa1eba12ab9ef14a46f1a11b36453f",
+                                "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
+                                "comment": "if you were moral and had to use an immoral language, then you would write the bounds checking by hand every time. only immoral people fail to see how rust is not Starsoup approved zero cost",
+                                "date": 1642853956000,
+                                "parent_id": "f83aa8ce-805a-11ec-a8a3-0242ac120002",
+                                "threads": []
+                              },
+                              {
+                                "_id": "f83aa8ce-805a-11ec-a8a3-0242ac12000123",
+                                "user_name": "dying207",
+                                "user_image": "https://styles.redditmedia.com/t5_ap9j7/styles/profileIcon_snooff67c7c3-5a5d-4556-9711-d79c09e6e8a2-headshot-f.png?width=256&height=256&crop=256:256,smart&s=3f9f6c9c783fdf4f41d3259322a931a07d1bc775",
+                                "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
+                                "comment": "Luckily in C++ we get things done using zero-cost abstractions like std::shared_ptr and using exceptions everywhere.",
+                                "date": 1642853956000,
+                                "parent_id": "f83aa8ce-805a-11ec-a8a3-0242ac120002",
+                                "threads": []
+                              },
+                              {
+                                "_id": "dcaef94a-81c5-11ec-a8a3-0242ac12000245",
+                                "user_name": "NonDairyYandere",
+                                "user_image": "https://styles.redditmedia.com/t5_378za9/styles/profileIcon_snoob04784c2-5139-45ea-8bd6-b16582551056-headshot.png?width=256&height=256&crop=256:256,smart&s=5962fc3c8ab78ea82c219937b36a315bdac2a42e",
+                                "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
+                                "comment": "If you leave a dollar under your pillow, Ferris will come in the night and elide your bound checks\n\n",
+                                "date": 1642853956000,
+                                "parent_id": "f83aa8ce-805a-11ec-a8a3-0242ac120002",
+                                "threads": []
+                              },
+                              {
+                                "_id": "dcaefa4e-81c5-11ec-a8a3-0242ac12000266",
+                                "user_name": "omwhoiscontrary",
+                                "user_image": "https://styles.redditmedia.com/t5_4h6n4q/styles/profileIcon_snoo45f9965d-5eae-432c-bdb8-42d2a184d757-headshot.png?width=256&height=256&crop=256:256,smart&s=778fd928da7c8b633edddea8e7f377745415b275",
+                                "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
+                                "comment": "Oh, is that two minus signs? I thought it was a badly kerned em dash.",
+                                "date": 1642853956000,
+                                "parent_id": "f83aa8ce-805a-11ec-a8a3-0242ac120002",
+                                "threads": []
+                              },
+                              {
+                                "_id": "dcaefb5c-81c5-11ec-a8a3-0242ac120002321",
+                                "user_name": "alert1xss",
+                                "user_image": "https://styles.redditmedia.com/t5_lbr1z/styles/profileIcon_snoof0d0c491-2346-471a-9567-ec7305dd3400-headshot-f.png?width=256&height=256&crop=256:256,smart&s=b85f3b20dfa48c1625e11587a1306eddb4bf0dac",
+                                "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
+                                "comment": "We have to differentiate the Tribes!\n\nCniles are fighting strcpy, segfaults, people who say they aint portable, micropython and alzheimers.\n\nCpp maymays are very different.",
+                                "date": 1642853956000,
+                                "parent_id": "f83aa8ce-805a-11ec-a8a3-0242ac120002",
+                                "threads": []
+                              },
+                              {
+                                "_id": "dcaefc4c-81c5-11ec-a8a3-0242ac120002654",
+                                "user_name": "tomwhoiscontrary",
+                                "user_image": "https://styles.redditmedia.com/t5_dhtrg/styles/profileIcon_snooa65ff507-8ee8-4c0e-861c-c862c453adb0-headshot.png?width=256&height=256&crop=256:256,smart&s=5e6f17d96dc2102a902a40131f2310904d0a08ce",
+                                "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
+                                "comment": "We usually call them Cniles.",
+                                "date": 1642853956000,
+                                "parent_id": "f83aa8ce-805a-11ec-a8a3-0242ac120002",
+                                "threads": []
+                              },
+                              {
+                                "_id": "dcaefd50-81c5-11ec-a8a3-0242ac120002vc",
+                                "user_name": "alert1xss",
+                                "user_image": "https://styles.redditmedia.com/t5_3tq52y/styles/profileIcon_snooc664a91e-e10b-457f-9dcd-2de9c610c7a0-headshot-f.png?width=256&height=256&crop=256:256,smart&s=21d910097c86057d3fbca655664570183ef5077e",
+                                "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
+                                "comment": "Whats a good derogatory word for C-- manglers?\n\nI feel like you cant laugh at those sad, helpless victims...\n\nThey know what kind of Hell they are in, and some of them like it...",
+                                "date": 1642853956000,
+                                "parent_id": "f83aa8ce-805a-11ec-a8a3-0242ac120002",
+                                "threads": []
+                              },
+                              {
+                                "_id": "dcaeff9e-81c5-11ec-a8a3-0242ac120002cx",
+                                "user_name": "Ineffective-Cellist8",
+                                "user_image": "https://styles.redditmedia.com/t5_sz6xq/styles/profileIcon_snoo4812fa7f-67c1-430a-952d-b57d03c30f73-headshot-f.png?width=256&height=256&crop=256:256,smart&s=7dd5ba231604656df16727d01372f31b91d75a89",
+                                "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
+                                "comment": "Can't jerk to truth I can handle",
+                                "date": 1642853956000,
+                                "parent_id": "f83aa8ce-805a-11ec-a8a3-0242ac120002",
+                                "threads": []
+                              },
+                              {
+                                "_id": "dcaf00ac-81c5-11ec-a8a3-0242ac12000ew2",
+                                "user_name": "Ineffective-Cellist8\n",
+                                "user_image": "https://www.redditstatic.com/avatars/avatar_default_02_24A0ED.png",
+                                "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
+                                "comment": "Thats how I feel about the people who like the following language\n\nEverything except for C#\n\n-Signed a C# developer",
+                                "date": 1642853956000,
+                                "parent_id": "f83aa8ce-805a-11ec-a8a3-0242ac120002",
+                                "threads": []
+                              }
+                            ]
                           }
                         ]
                       }
@@ -86,9 +177,9 @@
     ]
   },
   {
-    "_id": "f83ab030-805a-11ec-a8a3-0242ac12005502",
+    "_id": "dcaef72e-81c5-11ec-a8a3-0242ac120002",
     "user_name": "PL_Design",
-    "user_image": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_2.png",
+    "user_image": "https://styles.redditmedia.com/t5_25dzpt/styles/profileIcon_snoo07ffed13-24dc-41b5-8f23-49c8f7e3817f-headshot.png?width=256&height=256&crop=256:256,smart&s=ce0595e7e3fa1eba12ab9ef14a46f1a11b36453f",
     "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
     "comment": "if you were moral and had to use an immoral language, then you would write the bounds checking by hand every time. only immoral people fail to see how rust is not Starsoup approved zero cost",
     "date": 1642853956000,
@@ -96,91 +187,81 @@
     "threads": []
   },
   {
-    "_id": "f83ab030-805a-11ec-a8a3-0242ac12000882",
-    "user_name": "PL_Design",
-    "user_image": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_2.png",
+    "_id": "dcaef846-81c5-11ec-a8a3-0242ac120002",
+    "user_name": "dying207",
+    "user_image": "https://styles.redditmedia.com/t5_ap9j7/styles/profileIcon_snooff67c7c3-5a5d-4556-9711-d79c09e6e8a2-headshot-f.png?width=256&height=256&crop=256:256,smart&s=3f9f6c9c783fdf4f41d3259322a931a07d1bc775",
     "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
-    "comment": "if you were moral and had to use an immoral language, then you would write the bounds checking by hand every time. only immoral people fail to see how rust is not Starsoup approved zero cost",
+    "comment": "Luckily in C++ we get things done using zero-cost abstractions like std::shared_ptr and using exceptions everywhere.",
     "date": 1642853956000,
     "parent_id": null,
     "threads": []
   },
   {
-    "_id": "f83ab030-805a-11ec-a8a3-0242ac12000772",
-    "user_name": "PL_Design",
-    "user_image": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_2.png",
+    "_id": "dcaef94a-81c5-11ec-a8a3-0242ac120002",
+    "user_name": "NonDairyYandere",
+    "user_image": "https://styles.redditmedia.com/t5_378za9/styles/profileIcon_snoob04784c2-5139-45ea-8bd6-b16582551056-headshot.png?width=256&height=256&crop=256:256,smart&s=5962fc3c8ab78ea82c219937b36a315bdac2a42e",
     "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
-    "comment": "if you were moral and had to use an immoral language, then you would write the bounds checking by hand every time. only immoral people fail to see how rust is not Starsoup approved zero cost",
+    "comment": "If you leave a dollar under your pillow, Ferris will come in the night and elide your bound checks\n\n",
     "date": 1642853956000,
     "parent_id": null,
     "threads": []
   },
   {
-    "_id": "f83ab030-805a-11ec-a8a3-0242ac12000662",
-    "user_name": "PL_Design",
-    "user_image": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_2.png",
+    "_id": "dcaefa4e-81c5-11ec-a8a3-0242ac120002",
+    "user_name": "omwhoiscontrary",
+    "user_image": "https://styles.redditmedia.com/t5_4h6n4q/styles/profileIcon_snoo45f9965d-5eae-432c-bdb8-42d2a184d757-headshot.png?width=256&height=256&crop=256:256,smart&s=778fd928da7c8b633edddea8e7f377745415b275",
     "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
-    "comment": "if you were moral and had to use an immoral language, then you would write the bounds checking by hand every time. only immoral people fail to see how rust is not Starsoup approved zero cost",
+    "comment": "Oh, is that two minus signs? I thought it was a badly kerned em dash.",
     "date": 1642853956000,
     "parent_id": null,
     "threads": []
   },
   {
-    "_id": "f83ab030-805a-11ec-a8a3-0242ac12000442",
-    "user_name": "PL_Design",
-    "user_image": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_2.png",
+    "_id": "dcaefb5c-81c5-11ec-a8a3-0242ac120002",
+    "user_name": "alert1xss",
+    "user_image": "https://styles.redditmedia.com/t5_lbr1z/styles/profileIcon_snoof0d0c491-2346-471a-9567-ec7305dd3400-headshot-f.png?width=256&height=256&crop=256:256,smart&s=b85f3b20dfa48c1625e11587a1306eddb4bf0dac",
     "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
-    "comment": "if you were moral and had to use an immoral language, then you would write the bounds checking by hand every time. only immoral people fail to see how rust is not Starsoup approved zero cost",
+    "comment": "We have to differentiate the Tribes!\n\nCniles are fighting strcpy, segfaults, people who say they aint portable, micropython and alzheimers.\n\nCpp maymays are very different.",
     "date": 1642853956000,
     "parent_id": null,
     "threads": []
   },
   {
-    "_id": "f83ab030-805a-11ec-a8a3-0242ac12000332",
-    "user_name": "PL_Design",
-    "user_image": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_2.png",
+    "_id": "dcaefc4c-81c5-11ec-a8a3-0242ac120002",
+    "user_name": "tomwhoiscontrary",
+    "user_image": "https://styles.redditmedia.com/t5_dhtrg/styles/profileIcon_snooa65ff507-8ee8-4c0e-861c-c862c453adb0-headshot.png?width=256&height=256&crop=256:256,smart&s=5e6f17d96dc2102a902a40131f2310904d0a08ce",
     "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
-    "comment": "if you were moral and had to use an immoral language, then you would write the bounds checking by hand every time. only immoral people fail to see how rust is not Starsoup approved zero cost",
+    "comment": "We usually call them Cniles.",
     "date": 1642853956000,
     "parent_id": null,
     "threads": []
   },
   {
-    "_id": "f83ab030-805a-11ec-a8a3-0242ac12000222",
-    "user_name": "PL_Design",
-    "user_image": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_2.png",
+    "_id": "dcaefd50-81c5-11ec-a8a3-0242ac120002",
+    "user_name": "alert1xss",
+    "user_image": "https://styles.redditmedia.com/t5_3tq52y/styles/profileIcon_snooc664a91e-e10b-457f-9dcd-2de9c610c7a0-headshot-f.png?width=256&height=256&crop=256:256,smart&s=21d910097c86057d3fbca655664570183ef5077e",
     "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
-    "comment": "if you were moral and had to use an immoral language, then you would write the bounds checking by hand every time. only immoral people fail to see how rust is not Starsoup approved zero cost",
+    "comment": "Whats a good derogatory word for C-- manglers?\n\nI feel like you cant laugh at those sad, helpless victims...\n\nThey know what kind of Hell they are in, and some of them like it...",
     "date": 1642853956000,
     "parent_id": null,
     "threads": []
   },
   {
-    "_id": "f83ab030-805a-11ec-a8a3-0242ac12000222",
-    "user_name": "PL_Design",
-    "user_image": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_2.png",
+    "_id": "dcaeff9e-81c5-11ec-a8a3-0242ac120002",
+    "user_name": "Ineffective-Cellist8",
+    "user_image": "https://styles.redditmedia.com/t5_sz6xq/styles/profileIcon_snoo4812fa7f-67c1-430a-952d-b57d03c30f73-headshot-f.png?width=256&height=256&crop=256:256,smart&s=7dd5ba231604656df16727d01372f31b91d75a89",
     "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
-    "comment": "if you were moral and had to use an immoral language, then you would write the bounds checking by hand every time. only immoral people fail to see how rust is not Starsoup approved zero cost",
+    "comment": "Can't jerk to truth I can handle",
     "date": 1642853956000,
     "parent_id": null,
     "threads": []
   },
   {
-    "_id": "f83ab030-805a-11ec-a8a3-0242ac1200022",
-    "user_name": "PL_Design",
-    "user_image": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_2.png",
+    "_id": "dcaf00ac-81c5-11ec-a8a3-0242ac120002",
+    "user_name": "Ineffective-Cellist8\n",
+    "user_image": "https://www.redditstatic.com/avatars/avatar_default_02_24A0ED.png",
     "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
-    "comment": "if you were moral and had to use an immoral language, then you would write the bounds checking by hand every time. only immoral people fail to see how rust is not Starsoup approved zero cost",
-    "date": 1642853956000,
-    "parent_id": null,
-    "threads": []
-  },
-  {
-    "_id": "f83ab030-805a-11ec-a8a3-0242ac1200012",
-    "user_name": "PL_Design",
-    "user_image": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_2.png",
-    "user_id": "f83ab12a-805a-11ec-a8a3-0242ac120002",
-    "comment": "if you were moral and had to use an immoral language, then you would write the bounds checking by hand every time. only immoral people fail to see how rust is not Starsoup approved zero cost",
+    "comment": "Thats how I feel about the people who like the following language\n\nEverything except for C#\n\n-Signed a C# developer",
     "date": 1642853956000,
     "parent_id": null,
     "threads": []

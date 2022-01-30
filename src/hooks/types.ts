@@ -7,6 +7,7 @@ export interface CommentParams {
 export interface CommentsState {
   allData: Comments;
   data: Comments;
+  thread: Comments;
   page: number;
   total: number;
   limit: number;
@@ -15,6 +16,7 @@ export interface CommentsState {
 export enum CommentsActionsTypes {
   UPDATE = 'update',
   ADD = 'add',
+  SETTHREAD = 'set thread',
 }
 
 export interface CommentsAction {

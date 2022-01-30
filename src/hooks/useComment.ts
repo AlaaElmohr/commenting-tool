@@ -16,6 +16,7 @@ import { Comment } from 'types';
 const initialState = {
   allData: [],
   data: [],
+  thread: [],
   page: 1,
   total: 0,
   limit: 5,
@@ -41,6 +42,12 @@ const useComment = () => {
             data: [...data, ...allData.slice(page * limit, limit * (page + 1))],
             page: page + 1,
           };
+        case CommentsActionsTypes.SETTHREAD:
+          return {
+            ...state,
+            thread: payload,
+          };
+
         default:
           return state;
       }
@@ -65,6 +72,7 @@ const useComment = () => {
       _id: nanoid(),
     };
 
+    console.log('id', id, parentId);
     if (parentId === null || id === null) {
       //if there is no id this mean that this a comment not a thread, then push it at the beginning of the comments list.
       commentsList.unshift(newComment);
@@ -73,6 +81,7 @@ const useComment = () => {
       const parentComment = commentsList.filter(
         comment => comment._id === parentId,
       );
+      console.log('the parent', parentComment);
 
       helpers.addComment(parentComment[0], newComment, id);
     }
@@ -84,9 +93,7 @@ const useComment = () => {
   };
 
   const onLoadMore = () => {
-    console.log('totalm,', state.total, state.data.length);
     if (state.total >= state.data.length) {
-      console.log('Hello');
       dispatch({
         type: CommentsActionsTypes.UPDATE,
         payload: '',
@@ -94,10 +101,38 @@ const useComment = () => {
     }
   };
 
+  const getThread = (id: string, parentId: string | null) => {
+    let data = [...state.allData];
+    let parentComment = [];
+    console.log('id', id, parentId);
+
+    if (parentId === null) {
+      parentComment = data.filter(comment => comment._id === id);
+    } else {
+      parentComment = data.filter(comment => comment._id === parentId);
+    }
+
+    console.log('parentComment', parentComment);
+    if (parentComment.length > 0) {
+      const targetedThread = helpers.findComment(parentComment[0], id);
+      console.log('targetedThread', targetedThread);
+      if (targetedThread !== null) {
+        targetedThread.parent_id = null;
+        const mainThread = helpers.setMainThread(targetedThread, id);
+        console.log('mainthread', mainThread);
+        dispatch({
+          type: CommentsActionsTypes.SETTHREAD,
+          payload: [mainThread],
+        });
+      }
+    }
+  };
+
   return {
     ...state,
     addComment,
     onLoadMore,
+    getThread,
   };
 };
 

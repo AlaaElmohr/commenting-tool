@@ -5,6 +5,7 @@ export type CommentsListProps = {
   onReply: OnReplyParams;
   onSubmitReply: SubmitReplyParams;
   visibleInputs: Input;
+  getThread: (id: string, parentId: string | null) => void;
 };
 
 export type CommentsListParams = {
@@ -14,5 +15,6 @@ export type CommentsListParams = {
     onSubmitReply: SubmitReplyParams,
     visibleInputs: Input,
     level: number,
+    getThread: (id: string, parentId: string | null) => void,
   ): void;
 };
