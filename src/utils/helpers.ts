@@ -34,10 +34,12 @@ const helpers: Helpers = {
     return null;
   },
   addComment: (parentComment, newComment, commentId) => {
-    const getComment = helpers.findComment(parentComment, commentId);
+    if (commentId !== null) {
+      const getComment = helpers.findComment(parentComment, commentId);
 
-    if (getComment !== null) {
-      getComment?.threads?.unshift(newComment);
+      if (getComment !== null) {
+        getComment?.threads?.unshift(newComment);
+      }
     }
   },
   getTime: time => {

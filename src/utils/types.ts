@@ -1,7 +1,7 @@
 import { Comment, Comments } from 'types';
 
 export interface addCommentParams {
-  (comments: Comment, newComment: Comment, commentId: string): void;
+  (comments: Comment, newComment: Comment, commentId: string | null): void;
 }
 
 export interface findCommentParams {

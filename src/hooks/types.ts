@@ -1,7 +1,12 @@
 import { Comments } from 'types';
+import { RawDraftContentState } from 'draft-js';
 
 export interface CommentParams {
-  (id: string | null, parentId: string | null, comment: string): void;
+  (
+    id: string | null,
+    parentId: string | null,
+    comment: string | RawDraftContentState,
+  ): void;
 }
 
 export interface CommentsState {
@@ -14,6 +19,7 @@ export interface CommentsState {
 }
 
 export enum CommentsActionsTypes {
+  SET = 'set',
   UPDATE = 'update',
   ADD = 'add',
   SETTHREAD = 'set thread',

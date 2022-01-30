@@ -28,13 +28,20 @@ const useComment = () => {
       const { limit, page, allData, data } = state;
 
       switch (type) {
-        case CommentsActionsTypes.ADD:
+        case CommentsActionsTypes.SET:
           return {
             ...state,
             allData: payload,
             data: payload.slice(0, limit),
             total: payload.length,
             page: 1,
+          };
+        case CommentsActionsTypes.ADD:
+          return {
+            ...state,
+            allData: payload,
+            data: payload,
+            total: payload.length,
           };
         case CommentsActionsTypes.UPDATE:
           return {
@@ -57,7 +64,7 @@ const useComment = () => {
 
   useEffect(() => {
     dispatch({
-      type: CommentsActionsTypes.ADD,
+      type: CommentsActionsTypes.SET,
       payload: CommentsData,
     });
   }, []);
@@ -72,22 +79,26 @@ const useComment = () => {
       _id: nanoid(),
     };
 
-    console.log('id', id, parentId);
-    if (parentId === null || id === null) {
+    if (parentId === null && id === null) {
       //if there is no id this mean that this a comment not a thread, then push it at the beginning of the comments list.
       commentsList.unshift(newComment);
+    } else if (parentId === null && id) {
+      const targetedComment = commentsList.filter(
+        comment => comment._id === id,
+      );
+
+      targetedComment[0].threads.unshift(newComment);
     } else {
       //to handle the thread, get the top level comment with the parentId, then find the target thread and push the new comment to it.
       const parentComment = commentsList.filter(
         comment => comment._id === parentId,
       );
-      console.log('the parent', parentComment);
 
       helpers.addComment(parentComment[0], newComment, id);
     }
 
     dispatch({
-      type: CommentsActionsTypes.UPDATE,
+      type: CommentsActionsTypes.ADD,
       payload: commentsList,
     });
   };
